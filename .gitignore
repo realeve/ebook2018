@@ -12,3 +12,6 @@ run/
 *.un~
 /img/magazine_template_01/*.*
 /img/thumbnail_01/*.*
+.cache/
+/img/pdf/*.*
+/dist/

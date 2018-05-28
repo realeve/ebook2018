@@ -1,4 +1,4 @@
-  $(function() {
+  $(function () {
 
     var imageBookPath = "./img/magazine_template_01";
     var thumbPath = "./img/thumbnail_01/image_";
@@ -7,9 +7,6 @@
     function fullscreenErrorHandler() {
       if (self != top) return "The frame is blocking full screen mode. Click on 'remove frame' button above and try to go full screen again."
     }
-    $("#book1-trigger").on("click", function() {
-      buildBook("#book1");
-    })
 
     var optionsBook1 = {
       height: 1056,
@@ -33,17 +30,48 @@
       slideShowDelay: 5000
     };
 
-    function buildBook(elem) {
+    var optionsBook2 = {
+      height: 1024,
+      width: 725 * 2,
+      // ,maxWidth : 800
+      // ,maxHeight : 400
+      pageNumbers: false,
+      pdf: "./img/pdf/01.pdf",
+      pdfFind: false,
+      lightbox: "#book2-trigger",
+      lightboxClass: "lightbox-pdf",
+      centeredWhenClosed: true,
+      hardcovers: true,
+      curl: false,
+      style: "wowbook-cs-white",
+      toolbar: "lastLeft, left, right, lastRight, find, toc, zoomin, zoomout, download, flipsound, fullscreen, thumbnails",
+      thumbnailsPosition: 'bottom',
+      responsiveHandleWidth: 50,
+      onFullscreenError: fullscreenErrorHandler
+    };
+
+
+    function buildBook(elem, option) {
       var book = $.wowBook(elem);
       if (!book) {
-        $(elem).wowBook(optionsBook1);
+        $(elem).wowBook(option);
         book = $.wowBook(elem);
       }
-      book.showLightbox();
+      console.log(book)
+      // book.showLightbox();
     }
 
-    buildBook("#book1");
-    setTimeout(function() {
+    $("#book1-trigger").on("click", function () {
+      buildBook("#book1", optionsBook1);
+    })
+    $("#book2-trigger").on("click", function () {
+      buildBook("#book2", optionsBook2);
+    })
+
+
+    buildBook("#book1", optionsBook1);
+    buildBook("#book2", optionsBook2);
+    setTimeout(function () {
       $('#services').show();
       $('#mainNav').show();
     }, 1000);
