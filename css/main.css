@@ -1,0 +1,202 @@
+      .hidden-FIXME {
+          display: none;
+      }
+      
+      header {
+          display: none;
+      }
+      
+      .navbar-header {
+          width: 100% !important;
+      }
+      
+      .navbar-brand {
+          padding-right: 0;
+          font-size: 14px !important;
+      }
+      
+      #nav-buy-now {
+          color: black;
+          float: right;
+          font-size: 14px;
+          font-weight: 700;
+          margin-right: -10px;
+      }
+      
+      @media (min-width: 768px) {
+          #nav-buy-now {
+              margin-right: 0px;
+          }
+      }
+      
+      #bs-example-navbar-collapse-1 {
+          display: none;
+      }
+      
+      .wowbook {
+          font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+      }
+      
+      .wowbook-page-content {
+          padding: 1.5em;
+      }
+      
+      .wowbook ul {
+          padding-left: 1em;
+      }
+      
+      .book-thumb {
+          height: 300px;
+          box-shadow: 0 0 3px rgba(0, 0, 0, 0.5)
+      }
+      
+      #book1-trigger,
+      #book2-trigger,
+      #book3-trigger {
+          cursor: pointer;
+      }
+      
+      #book1-trigger:hover,
+      #book2-trigger:hover,
+      #book3-trigger:hover {
+          background: #f8f8f8;
+      }
+      
+      .wowbook-lightbox > .wowbook-close {
+          background: transparent !important;
+          border: none !important;
+          color: #222 !important;
+          font-size: 2.5em;
+      }
+      
+      .wowbook-lightbox > .wowbook-close:hover {
+          background: #444 !important;
+          color: white !important;
+          border-radius: 3px;
+      }
+      
+      .lightbox-images1 .wowbook-book-container {
+          background: #f9faeb;
+          /* Old browsers */
+          background: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, #f9faeb 100%);
+          /* FF3.6-15 */
+          background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%, #f9faeb 100%);
+          /* Chrome10-25,Safari5.1-6 */
+          background: radial-gradient(ellipse at center, #ffffff 0%, #f9faeb 100%);
+          /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      }
+      
+      .lightbox-images1 > .wowbook-close,
+      .lightbox-images2 > .wowbook-close {
+          color: #ccc !important;
+      }
+      
+      .lightbox-images2 .wowbook-book-container {
+          background: #1E2831;
+          /* Old browsers */
+          background: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, #1E2831 100%);
+          /* FF3.6-15 */
+          background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%, #1E2831 100%);
+          /* Chrome10-25,Safari5.1-6 */
+          background: radial-gradient(ellipse at center, #ffffff 0%, #1E2831 100%);
+          /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      }
+      
+      .lightbox-images1 .wowbook-book-container {
+          background: #f9faeb;
+          background: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, #f9faeb 100%);
+          background: -webkit-radial-gradient(center ellipse cover, #ffffff 0%, #f9faeb 100%);
+          background: url(../img/back.jpg) cover;
+      }
+      
+      hr {
+          max-width: 450px;
+      }
+      
+      .wowbook-right .wowbook-gutter-shadow {
+          background-image: url("../img/page_right_background.png");
+          background-position: 0 0;
+          width: 75px;
+      }
+      
+      .wowbook-left .wowbook-gutter-shadow {
+          background-image: url("../img/page_left_background.png");
+          opacity: 0.5;
+          width: 60px;
+      }
+      
+      .wowbook-cs-white.wowbook-nav,
+      .wowbook-cs-white .wowbook-controls,
+      .wowbook-cs-white .wowbook-share-buttons,
+      .wowbook-cs-white.wowbook-controls,
+      .wowbook-cs-white.wowbook-share-buttons {
+          background: #334;
+          color: #eee;
+      }
+      
+      .wowbook-cs-white.wowbook-nav,
+      .wowbook-cs-white .wowbook-control {
+          background: #334;
+      }
+      
+      ::-webkit-scrollbar {
+          display: none;
+      }
+      /*music*/
+      
+      .media-wrap {
+          overflow: hidden;
+          position: fixed;
+          bottom: -10px;
+          right: 5px;
+          z-index: 100002;
+          width: 6.5em;
+          height: 6.5em;
+          font-size: 16px;
+      }
+      
+      .media-wrap span {
+          float: left;
+          height: 4em;
+          width: 4em;
+          line-height: 3rem;
+          color: #fff;
+          font-size: 1em;
+      }
+      
+      .media-wrap i {
+          width: 2.5em;
+          height: 2.5em;
+      }
+      
+      .music-btn,
+      .music-btn-white {
+          float: right;
+          width: 1.8rem;
+          height: 1.8rem;
+          background: url('../img/music-icon.png');
+          background-size: cover;
+      }
+      
+      .music-btn-white {
+          background: url('../img/audio.jpg');
+          background-size: cover;
+      }
+      
+      .music-btn.on {
+          -webkit-animation: reverseRotataZ 1.2s linear infinite;
+      }
+      
+      @-webkit-keyframes reverseRotataZ {
+          0% {
+              -webkit-transform: rotateZ(0deg);
+          }
+          100% {
+              -webkit-transform: rotateZ(-360deg);
+          }
+      }
+      
+      #musicBtnTxt {
+          color: #fff;
+          margin-top: 0px;
+      }
