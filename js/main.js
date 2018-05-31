@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
   // var imageBookPath = "./img/magazine_template_01";
   // var thumbPath = "./img/thumbnail_01/image_";
   // $("#book1-trigger .book-thumb").attr("src", imageBookPath + "/image_000.jpg")
@@ -36,19 +36,21 @@ $(function() {
   var optionsBook1 = {
     height: 1024,
     width: 725 * 2,
+    slideShowDelay: 30 * 1E3,
     // ,maxWidth : 800
     // ,maxHeight : 400
     pageNumbers: true,
     pdf: "./img/pdf/02.pdf",
-    pdfFind: false,
+    doubleClickToZoom: true,
+    pagesInMemory: 10,
+    pdfFind: true,
     lightbox: "#book1-trigger",
     lightboxClass: "lightbox-pdf",
     centeredWhenClosed: true,
     hardcovers: true,
-    curl: false,
+    curl: true,
     style: "wowbook-cs-white",
-    toolbar:
-      "lastLeft, left, right, lastRight, find, toc, zoomin, zoomout, download, flipsound, fullscreen, thumbnails",
+    toolbar: "lastLeft, left, slideshow ,right, lastRight, find, toc, zoomin, zoomout, download, flipsound, fullscreen, thumbnails",
     thumbnailsPosition: "bottom",
     responsiveHandleWidth: 50,
     onFullscreenError: fullscreenErrorHandler
@@ -57,19 +59,21 @@ $(function() {
   var optionsBook2 = {
     height: 1024,
     width: 725 * 2,
+    slideShowDelay: 30 * 1E3,
     // ,maxWidth : 800
     // ,maxHeight : 400
-    pageNumbers: false,
+    pageNumbers: true,
     pdf: "./img/pdf/01.pdf",
-    pdfFind: false,
+    doubleClickToZoom: true,
+    pagesInMemory: 10,
+    pdfFind: true,
     lightbox: "#book2-trigger",
     lightboxClass: "lightbox-pdf",
     centeredWhenClosed: true,
     hardcovers: true,
-    curl: false,
+    curl: true,
     style: "wowbook-cs-white",
-    toolbar:
-      "lastLeft, left, right, lastRight, find, toc, zoomin, zoomout, download, flipsound, fullscreen, thumbnails",
+    toolbar: "lastLeft, left,slideshow ,right, lastRight, find, toc, zoomin, zoomout, download, flipsound, fullscreen, thumbnails",
     thumbnailsPosition: "bottom",
     responsiveHandleWidth: 50,
     onFullscreenError: fullscreenErrorHandler
@@ -81,20 +85,19 @@ $(function() {
       $(elem).wowBook(option);
       book = $.wowBook(elem);
     }
-    console.log(book);
     // book.showLightbox();
   }
 
-  $("#book1-trigger").on("click", function() {
+  $("#book1-trigger").on("click", function () {
     buildBook("#book1", optionsBook1);
   });
-  $("#book2-trigger").on("click", function() {
+  $("#book2-trigger").on("click", function () {
     buildBook("#book2", optionsBook2);
   });
 
   buildBook("#book1", optionsBook1);
   buildBook("#book2", optionsBook2);
-  setTimeout(function() {
+  setTimeout(function () {
     $("#services").show();
     $("#mainNav").show();
   }, 1000);
